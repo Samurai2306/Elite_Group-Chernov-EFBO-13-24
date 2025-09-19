@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Супер дупер мега важнуе и нужное решение задачек для теста по элитке</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: #333;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            border-radius: 10px;
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .tasks {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .task {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .task:hover {
+            transform: translateY(-5px);
+        }
+
+        .task h2 {
+            color: #2575fc;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #6a11cb;
+            padding-bottom: 10px;
+        }
+
+        .task-content {
+            margin-bottom: 15px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .input-group input:focus {
+            border-color: #6a11cb;
+            outline: none;
+        }
+
+        button {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            opacity: 0.9;
+            transform: scale(1.05);
+        }
+
+        .result {
+            margin-top: 15px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #6a11cb;
+            font-weight: bold;
+            min-height: 50px;
+        }
+
+        .code {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+        }
+
+        .keyword {
+            color: #f92672;
+        }
+
+        .function {
+            color: #66d9ef;
+        }
+
+        .variable {
+            color: #a6e22e;
+        }
+
+        .string {
+            color: #e6db74;
+        }
+
+        .number {
+            color: #ae81ff;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            color: white;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Решения 5 задач для элитки</h1>
+            <p class="description">решения на JavaScript</p>
+        </header>
+
+        <div class="tasks">
+            <!-- Задача 1 -->
+            <div class="task">
+                <h2>Задача 1: Проверка скобок</h2>
+                <div class="task-content">
+                    <p>Проверьте, правильно ли расставлены скобки в строке</p>
+                    <div class="input-group">
+                        <label for="brackets">Введите строку со скобками:</label>
+                        <input type="text" id="brackets" value="()[]{}" placeholder="Например: ()[]{}">
+                    </div>
+                    <button onclick="checkBrackets()">Проверить</button>
+                    <div class="result" id="result1">Результат появится здесь</div>
+                </div>
+                <div class="code">
+                    <pre><span class="keyword">function</span> <span class="function">isValid</span>(s) {
+    <span class="keyword">let</span> <span class="variable">stek</span> = [];
+    <span class="keyword">let</span> <span class="variable">skobki</span> = {
+        <span class="string">')'</span>: <span class="string">'('</span>,
+        <span class="string">'}'</span>: <span class="string">'{'</span>,
+        <span class="string">']'</span>: <span class="string">'['</span>
+    };
+    
+    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i < s.length; i++) {
+        <span class="keyword">let</span> <span class="variable">simvol</span> = s[i];
+        <span class="keyword">if</span> (simvol <span class="keyword">in</span> skobki) {
+            <span class="keyword">let</span> <span class="variable">poslednyaya</span> = stek.pop();
+            <span class="keyword">if</span> (poslednyaya !== skobki[simvol]) {
+                <span class="keyword">return</span> <span class="keyword">false</span>;
+            }
+        } <span class="keyword">else</span> {
+            stek.push(simvol);
+        }
+    }
+    
+    <span class="keyword">return</span> stek.length === <span class="number">0</span>;
+}</pre>
+                </div>
+            </div>
+
+            <!-- Задача 2 -->
+            <div class="task">
+                <h2>Задача 2: Объединение массивов</h2>
+                <div class="task-content">
+                    <p>Объедините два отсортированных массива</p>
+                    <div class="input-group">
+                        <label for="nums1">Первый массив (с нулями в конце):</label>
+                        <input type="text" id="nums1" value="1,2,3,0,0,0" placeholder="Например: 1,2,3,0,0,0">
+                    </div>
+                    <div class="input-group">
+                        <label for="m">Количество элементов в первом массиве (m):</label>
+                        <input type="number" id="m" value="3">
+                    </div>
+                    <div class="input-group">
+                        <label for="nums2">Второй массив:</label>
+                        <input type="text" id="nums2" value="2,5,6" placeholder="Например: 2,5,6">
+                    </div>
+                    <div class="input-group">
+                        <label for="n">Количество элементов во втором массиве (n):</label>
+                        <input type="number" id="n" value="3">
+                    </div>
+                    <button onclick="mergeArrays()">Объединить</button>
+                    <div class="result" id="result2">Результат появится здесь</div>
+                </div>
+                <div class="code">
+                    <pre><span class="keyword">function</span> <span class="function">merge</span>(nums1, m, nums2, n) {
+    <span class="keyword">let</span> <span class="variable">i</span> = m - <span class="number">1</span>;
+    <span class="keyword">let</span> <span class="variable">j</span> = n - <span class="number">1</span>;
+    <span class="keyword">let</span> <span class="variable">k</span> = m + n - <span class="number">1</span>;
+    
+    <span class="keyword">while</span> (j >= <span class="number">0</span>) {
+        <span class="keyword">if</span> (i >= <span class="number">0</span> && nums1[i] > nums2[j]) {
+            nums1[k] = nums1[i];
+            i--;
+        } <span class="keyword">else</span> {
+            nums1[k] = nums2[j];
+            j--;
+        }
+        k--;
+    }
+}</pre>
+                </div>
+            </div>
+
+            <!-- Задача 3 -->
+            <div class="task">
+                <h2>Задача 3: Максимальная прибыль</h2>
+                <div class="task-content">
+                    <p>Найдите максимальную прибыль от покупки и продажи акций</p>
+                    <div class="input-group">
+                        <label for="prices">Цены акций по дням:</label>
+                        <input type="text" id="prices" value="7,1,5,3,6,4" placeholder="Например: 7,1,5,3,6,4">
+                    </div>
+                    <button onclick="calculateProfit()">Рассчитать прибыль</button>
+                    <div class="result" id="result3">Результат появится здесь</div>
+                </div>
+                <div class="code">
+                    <pre><span class="keyword">function</span> <span class="function">maxProfit</span>(prices) {
+    <span class="keyword">let</span> <span class="variable">minCena</span> = <span class="keyword">Infinity</span>;
+    <span class="keyword">let</span> <span class="variable">maxProfit</span> = <span class="number">0</span>;
+    
+    <span class="keyword">for</span> (<span class="keyword">let</span> <span class="variable">cena</span> <span class="keyword">of</span> prices) {
+        <span class="keyword">if</span> (cena < minCena) {
+            minCena = cena;
+        } <span class="keyword">else</span> <span class="keyword">if</span> (cena - minCena > maxProfit) {
+            maxProfit = cena - minCena;
+        }
+    }
+    
+    <span class="keyword">return</span> maxProfit;
+}</pre>
+                </div>
+            </div>
+
+            <!-- Задача 4 -->
+            <div class="task">
+                <h2>Задача 4: Проверка анаграммы</h2>
+                <div class="task-content">
+                    <p>Проверьте, являются ли две строки анаграмами</p>
+                    <div class="input-group">
+                        <label for="s1">Первая строка:</label>
+                        <input type="text" id="s1" value="anagram" placeholder="Например: anagram">
+                    </div>
+                    <div class="input-group">
+                        <label for="s2">Вторая строка:</label>
+                        <input type="text" id="s2" value="nagaram" placeholder="Например: nagaram">
+                    </div>
+                    <button onclick="checkAnagram()">Проверить</button>
+                    <div class="result" id="result4">Результат появится здесь</div>
+                </div>
+                <div class="code">
+                    <pre><span class="keyword">function</span> <span class="function">isAnagram</span>(s, t) {
+    <span class="keyword">if</span> (s.length !== t.length) <span class="keyword">return</span> <span class="keyword">false</span>;
+    
+    <span class="keyword">let</span> <span class="variable">bukvy</span> = {};
+    
+    <span class="keyword">for</span> (<span class="keyword">let</span> <span class="variable">char</span> <span class="keyword">of</span> s) {
+        bukvy[char] = (bukvy[char] || <span class="number">0</span>) + <span class="number">1</span>;
+    }
+    
+    <span class="keyword">for</span> (<span class="keyword">let</span> <span class="variable">char</span> <span class="keyword">of</span> t) {
+        <span class="keyword">if</span> (!bukvy[char]) <span class="keyword">return</span> <span class="keyword">false</span>;
+        bukvy[char]--;
+    }
+    
+    <span class="keyword">return</span> <span class="keyword">true</span>;
+}</pre>
+                </div>
+            </div>
+
+            <!-- Задача 5 -->
+            <div class="task">
+                <h2>Задача 5: Счётчик запросов</h2>
+                <div class="task-content">
+                    <p>Симуляция работы счётчика запросов</p>
+                    <div class="input-group">
+                        <label for="pingTime">Время запроса (t):</label>
+                        <input type="number" id="pingTime" placeholder="Например: 100">
+                    </div>
+                    <button onclick="pingRequest()">Отправить запрос</button>
+                    <button onclick="resetCounter()">Сбросить счётчик</button>
+                    <div class="result" id="result5">Нажми "Отправить запрос"</div>
+                </div>
+                <div class="code">
+                    <pre><span class="keyword">class</span> <span class="class-name">RecentCounter</span> {
+    <span class="function">constructor</span>() {
+        <span class="keyword">this</span>.<span class="variable">zaprosi</span> = [];
+    }
+    
+    <span class="function">ping</span>(t) {
+        <span class="keyword">this</span>.zaprosi.push(t);
+        <span class="keyword">while</span> (<span class="keyword">this</span>.zaprosi[<span class="number">0</span>] < t - <span class="number">3000</span>) {
+            <span class="keyword">this</span>.zaprosi.shift();
+        }
+        <span class="keyword">return</span> <span class="keyword">this</span>.zaprosi.length;
+    }
+}</pre>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Решения задач по программированию на JavaScript</p>
+        </footer>
+    </div>
+
+    <script>
+        function isValid(s) {
+            let stek = [];
+            let skobki = {
+                ')': '(',
+                '}': '{',
+                ']': '['
+            };
+
+            for (let i = 0; i < s.length; i++) {
+                let simvol = s[i];
+                if (simvol in skobki) {
+                    let poslednyaya = stek.pop();
+                    if (poslednyaya !== skobki[simvol]) {
+                        return false;
+                    }
+                } else {
+                    stek.push(simvol);
+                }
+            }
+
+            return stek.length === 0;
+        }
+
+        function checkBrackets() {
+            const input = document.getElementById('brackets').value;
+            const result = isValid(input);
+            document.getElementById('result1').textContent = result ? '✓ Правильно' : '✗ Неправильно';
+        }
+
+        function merge(nums1, m, nums2, n) {
+            let i = m - 1;
+            let j = n - 1;
+            let k = m + n - 1;
+
+            while (j >= 0) {
+                if (i >= 0 && nums1[i] > nums2[j]) {
+                    nums1[k] = nums1[i];
+                    i--;
+                } else {
+                    nums1[k] = nums2[j];
+                    j--;
+                }
+                k--;
+            }
+        }
+
+        function mergeArrays() {
+            const nums1 = document.getElementById('nums1').value.split(',').map(Number);
+            const m = parseInt(document.getElementById('m').value);
+            const nums2 = document.getElementById('nums2').value.split(',').map(Number);
+            const n = parseInt(document.getElementById('n').value);
+
+            const nums1Copy = [...nums1];
+
+            merge(nums1Copy, m, nums2, n);
+            document.getElementById('result2').textContent = `Результат: [${nums1Copy.join(', ')}]`;
+        }
+
+        function maxProfit(prices) {
+            let minCena = Infinity;
+            let maxProfit = 0;
+
+            for (let cena of prices) {
+                if (cena < minCena) {
+                    minCena = cena;
+                } else if (cena - minCena > maxProfit) {
+                    maxProfit = cena - minCena;
+                }
+            }
+
+            return maxProfit;
+        }
+
+        function calculateProfit() {
+            const prices = document.getElementById('prices').value.split(',').map(Number);
+            const profit = maxProfit(prices);
+            document.getElementById('result3').textContent = `Максимальная прибыль: ${profit}`;
+        }
+
+        function isAnagram(s, t) {
+            if (s.length !== t.length) return false;
+
+            let bukvy = {};
+
+            for (let char of s) {
+                bukvy[char] = (bukvy[char] || 0) + 1;
+            }
+
+            for (let char of t) {
+                if (!bukvy[char]) return false;
+                bukvy[char]--;
+            }
+
+            return true;
+        }
+
+        function checkAnagram() {
+            const s = document.getElementById('s1').value;
+            const t = document.getElementById('s2').value;
+            const result = isAnagram(s, t);
+            document.getElementById('result4').textContent = result ? '✓ Это анаграмма' : '✗ Это не анаграмма';
+        }
+
+        let recentCounter = new RecentCounter();
+
+        class RecentCounter {
+            constructor() {
+                this.zaprosi = [];
+            }
+
+            ping(t) {
+                this.zaprosi.push(t);
+                while (this.zaprosi[0] < t - 3000) {
+                    this.zaprosi.shift();
+                }
+                return this.zaprosi.length;
+            }
+        }
+
+        function pingRequest() {
+            const t = parseInt(document.getElementById('pingTime').value);
+            if (isNaN(t)) {
+                alert('Введите корректное время');
+                return;
+            }
+
+            const count = recentCounter.ping(t);
+            document.getElementById('result5').textContent =
+                `Запрос в время ${t}. Количество запросов за последние 3000 мс: ${count}`;
+        }
+
+        function resetCounter() {
+            recentCounter = new RecentCounter();
+            document.getElementById('result5').textContent = 'Счётчик сброшен. Нажми "Отправить запрос"';
+        }
+    </script>
+</body>
+
+</html>
