@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: inherit;
 }
 
 
@@ -42,12 +43,11 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
 body {
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     color: var(--text-dark);
     background: linear-gradient(135deg, #f3e8ff 0%, #fff7ed 25%, #fef3c7 50%, #ffedd5 75%, #fed7aa 100%);
     background-attachment: fixed;
@@ -55,8 +55,11 @@ body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
     position: relative;
     min-height: 100vh;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
 }
 
 .container {
@@ -85,7 +88,7 @@ body {
 }
 
 .logo {
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 1.8rem;
     font-weight: 700;
     color: white;
@@ -163,7 +166,7 @@ body {
 }
 
 .hero-title {
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 20px;
@@ -273,7 +276,7 @@ section {
 }
 
 .section-title {
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 2.8rem;
     font-weight: 700;
     text-align: center;
@@ -604,7 +607,7 @@ section {
 }
 
 .modal-header h3 {
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--text-dark);
@@ -668,7 +671,7 @@ section {
 }
 
 .modal-section h4 {
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 1.05rem;
     font-weight: 600;
     color: var(--text-dark);
@@ -775,7 +778,7 @@ section {
 }
 
 .event-title {
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 12px;
@@ -838,7 +841,7 @@ section {
 }
 
 .stat-number {
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 3.5rem;
     font-weight: 700;
     background: linear-gradient(135deg, var(--lavender-500), var(--orange-500));
@@ -968,7 +971,7 @@ section {
 }
 
 .contact-card h3 {
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--text-dark);
@@ -1100,7 +1103,7 @@ section {
 }
 
 .article-title {
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 2.8rem;
     font-weight: 700;
     color: var(--text-dark);
@@ -1156,7 +1159,7 @@ section {
 }
 
 .article-content h2 {
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 2rem;
     font-weight: 600;
     margin-top: 40px;
@@ -1165,7 +1168,7 @@ section {
 }
 
 .article-content h3 {
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
     margin-top: 30px;
