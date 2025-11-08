@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="IT-события и мероприятия в Москве - конференции, митапы, хакатоны">
-    <title>IT Events Moscow - События и мероприятия</title>
+    <meta name="description" content="Хакатоны, чемпионаты, турниры, олимпиады по IT, программированию, разработке, дизайну - онлайн-календарь мероприятий">
+    <title>IT Eventus - Календарь IT-соревнований</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <h1 class="logo">IT Events Moscow</h1>
+                <h1 class="logo">IT Eventus</h1>
                 <nav class="nav">
                     <ul class="nav-list">
-                        <li><a href="index.html" class="nav-link active">Главная</a></li>
-                        <li><a href="#events" class="nav-link">События</a></li>
+                        <li><a href="#events" class="nav-link active">Главная</a></li>
+                        <li><a href="#events" class="nav-link">Календарь</a></li>
                         <li><a href="#about" class="nav-link">О нас</a></li>
                         <li><a href="#contact" class="nav-link">Контакты</a></li>
                     </ul>
@@ -27,109 +30,289 @@
     <main>
         <section class="hero">
             <div class="container">
-                <h2 class="hero-title">Добро пожаловать в мир IT-событий!</h2>
-                <p class="hero-text">Откройте для себя лучшие конференции, митапы и хакатоны в Москве</p>
-                <a href="#events" class="btn btn-primary">Смотреть события</a>
+                <h2 class="hero-title">Хакатоны, чемпионаты, турниры, олимпиады</h2>
+                <p class="hero-text">Онлайн-календарь IT-соревнований. Участвуй и побеждай!</p>
+                <a href="#events" class="btn btn-primary">Смотреть календарь</a>
             </div>
         </section>
 
         <section id="events" class="events-section">
             <div class="container">
-                <h2 class="section-title">Предстоящие события</h2>
+                <h2 class="section-title">Календарь мероприятий</h2>
                 <div class="events-grid">
                     <article class="event-card">
                         <div class="event-image">
-                            <div class="event-badge">Новое</div>
-                        </div>
-                        <div class="event-content">
-                            <span class="event-category">Конференция</span>
-                            <h3 class="event-title">Frontend Conf 2025</h3>
-                            <p class="event-description">Крупнейшая конференция по фронтенд-разработке в России. Доклады от ведущих специалистов индустрии.</p>
-                            <div class="event-meta">
-                                <span class="event-date">15-16 марта 2025</span>
-                                <span class="event-location">Москва, КВЦ Сокольники</span>
-                            </div>
-                            <a href="news.html" class="btn btn-secondary">Подробнее</a>
-                        </div>
-                    </article>
-
-                    <article class="event-card">
-                        <div class="event-image event-image-2">
-                            <div class="event-badge">Популярное</div>
+                            <img src="https://lh3.googleusercontent.com/d/1_qU17vqBeR2Fqf7U2lCylg8HH5Zv8u52" alt="VTB API hackathon logo" class="event-logo">
+                            <div class="event-badge">Активные</div>
                         </div>
                         <div class="event-content">
                             <span class="event-category">Хакатон</span>
-                            <h3 class="event-title">Moscow Hackathon 2025</h3>
-                            <p class="event-description">48-часовой марафон программирования. Создайте инновационный проект и выиграйте призы!</p>
+                            <h3 class="event-title">VTB API hackathon 2025</h3>
+                            <p class="event-description">Специализированный хакатон по открытым API. Треки: Мультибанк, Защита API, Оркестр из API. Призовой фонд: 2.500.000 ₽</p>
                             <div class="event-meta">
-                                <span class="event-date">22-24 марта 2025</span>
-                                <span class="event-location">Москва, Digital October</span>
+                                <span class="event-date">27 октября – 22 ноября</span>
+                                <span class="event-location">Онлайн и офлайн</span>
                             </div>
-                            <a href="#" class="btn btn-secondary">Подробнее</a>
+                            <button class="btn btn-secondary event-details-btn" data-event="vtb">Подробнее</button>
+                        </div>
+                        <div class="event-modal" id="vtb-modal" style="display: none;">
+                            <div class="modal-overlay"></div>
+                            <div class="modal-content">
+                                <button class="modal-close">&times;</button>
+                                <div class="modal-header">
+                                    <h3>VTB API hackathon 2025</h3>
+                                    <span class="modal-category">Хакатон</span>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-info-grid">
+                                        <div class="modal-info-item">
+                                            <strong>Даты:</strong> 27 октября – 22 ноября
+                                        </div>
+                                        <div class="modal-info-item">
+                                            <strong>Формат:</strong> Онлайн и офлайн
+                                        </div>
+                                        <div class="modal-info-item">
+                                            <strong>Призовой фонд:</strong> 2.500.000 ₽
+                                        </div>
+                                    </div>
+                                    <div class="modal-section">
+                                        <p><strong>Треки:</strong> Мультибанк, Защита API, Оркестр из API</p>
+                                    </div>
+                                    <div class="modal-actions">
+                                        <a href="https://apihack.vtb.ru/" class="btn btn-primary" target="_blank">Зарегистрироваться</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </article>
 
                     <article class="event-card">
-                        <div class="event-image event-image-3">
-                            <div class="event-badge">Скоро</div>
+                        <div class="event-image">
+                            <img src="https://lh3.googleusercontent.com/d/1O45-o_NZw3cBYqb87MG7GgYmihJDMbdY" alt="MAX и VK Education logo" class="event-logo">
+                            <div class="event-badge">Активные</div>
                         </div>
                         <div class="event-content">
-                            <span class="event-category">Митап</span>
-                            <h3 class="event-title">React Moscow Meetup</h3>
-                            <p class="event-description">Ежемесячная встреча разработчиков React. Обмен опытом и networking.</p>
+                            <span class="event-category">Хакатон</span>
+                            <h3 class="event-title">Хакатон для студентов от MAX и VK Education</h3>
+                            <p class="event-description">Онлайн-отбор и очный финал в Москве. Создайте инновационный проект и выиграйте крупнейший призовой фонд: 3.000.000 ₽</p>
                             <div class="event-meta">
-                                <span class="event-date">5 апреля 2025</span>
-                                <span class="event-location">Москва, офис Яндекса</span>
+                                <span class="event-date">Онлайн-отбор и очный финал</span>
+                                <span class="event-location">Онлайн + Москва</span>
                             </div>
-                            <a href="#" class="btn btn-secondary">Подробнее</a>
+                            <button class="btn btn-secondary event-details-btn" data-event="max-vk">Подробнее</button>
+                        </div>
+                        <div class="event-modal" id="max-vk-modal" style="display: none;">
+                            <div class="modal-overlay"></div>
+                            <div class="modal-content">
+                                <button class="modal-close">&times;</button>
+                                <div class="modal-header">
+                                    <h3>Хакатон для студентов от MAX и VK Education</h3>
+                                    <span class="modal-category">Хакатон</span>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-info-grid">
+                                        <div class="modal-info-item">
+                                            <strong>Формат:</strong> Онлайн-отбор + очный финал
+                                        </div>
+                                        <div class="modal-info-item">
+                                            <strong>Локация:</strong> Москва
+                                        </div>
+                                        <div class="modal-info-item">
+                                            <strong>Призовой фонд:</strong> 3.000.000 ₽
+                                        </div>
+                                    </div>
+                                    <div class="modal-section">
+                                        <p>Онлайн-отбор по всей России, очный финал в Москве. Менторская поддержка и ресурсы для разработки.</p>
+                                    </div>
+                                    <div class="modal-actions">
+                                        <a href="#" class="btn btn-primary">Узнать больше</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </article>
 
                     <article class="event-card">
-                        <div class="event-image event-image-4">
-                            <div class="event-badge">Новое</div>
+                        <div class="event-image">
+                            <img src="https://lh3.googleusercontent.com/d/1DsscmwhhNYMY9abhQsxVFELdUTgHsgDP" alt="BEST HACK'25 logo" class="event-logo">
+                            <div class="event-badge">Активные</div>
                         </div>
                         <div class="event-content">
-                            <span class="event-category">Воркшоп</span>
-                            <h3 class="event-title">Node.js Advanced Workshop</h3>
-                            <p class="event-description">Практический воркшоп по продвинутым техникам разработки на Node.js.</p>
+                            <span class="event-category">Хакатон</span>
+                            <h3 class="event-title">BEST HACK'25</h3>
+                            <p class="event-description">Хакатон по Data Science от RWB. Показать навыки, найти команду, карьерные возможности.</p>
                             <div class="event-meta">
-                                <span class="event-date">12 апреля 2025</span>
-                                <span class="event-location">Москва, Школа 21</span>
+                                <span class="event-date">1-7 ноября (отбор), 15-16 ноября (финал)</span>
+                                <span class="event-location">Онлайн + очно в Сколтехе</span>
                             </div>
-                            <a href="#" class="btn btn-secondary">Подробнее</a>
+                            <button class="btn btn-secondary event-details-btn" data-event="best-hack">Подробнее</button>
+                        </div>
+                        <div class="event-modal" id="best-hack-modal" style="display: none;">
+                            <div class="modal-overlay"></div>
+                            <div class="modal-content">
+                                <button class="modal-close">&times;</button>
+                                <div class="modal-header">
+                                    <h3>BEST HACK'25</h3>
+                                    <span class="modal-category">Хакатон</span>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-info-grid">
+                                        <div class="modal-info-item">
+                                            <strong>Отбор:</strong> 1-7 ноября (онлайн)
+                                        </div>
+                                        <div class="modal-info-item">
+                                            <strong>Финал:</strong> 15-16 ноября
+                                        </div>
+                                        <div class="modal-info-item">
+                                            <strong>Локация:</strong> Сколтех
+                                        </div>
+                                    </div>
+                                    <div class="modal-section">
+                                        <p>Хакатон по Data Science. Покажите навыки в работе с данными, найдите команду и откройте карьерные возможности.</p>
+                                    </div>
+                                    <div class="modal-actions">
+                                        <a href="#" class="btn btn-primary">Узнать больше</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </article>
 
                     <article class="event-card">
-                        <div class="event-image event-image-5">
-                            <div class="event-badge">Популярное</div>
+                        <div class="event-image">
+                            <img src="https://lh3.googleusercontent.com/d/1JDyIaeaJgqBzRAQlNWLuYytm45X56mgZ" alt="Т1 хакатон logo" class="event-logo">
+                            <div class="event-badge">Активные</div>
                         </div>
                         <div class="event-content">
-                            <span class="event-category">Конференция</span>
-                            <h3 class="event-title">AI & ML Summit 2025</h3>
-                            <p class="event-description">Конференция по искусственному интеллекту и машинному обучению.</p>
+                            <span class="event-category">Хакатон</span>
+                            <h3 class="event-title">Хакатон от ИТ-холдинга Т1 в Москве</h3>
+                            <p class="event-description">Для студентов IT: треки VibeCode Jam (ИИ-собеседования) и Self-Deploy (CI/CD). Призовой фонд: 1.200.000 ₽</p>
                             <div class="event-meta">
-                                <span class="event-date">20-21 апреля 2025</span>
-                                <span class="event-location">Москва, World Trade Center</span>
+                                <span class="event-date">25-28 ноября</span>
+                                <span class="event-location">Онлайн + финал на площадке</span>
                             </div>
-                            <a href="#" class="btn btn-secondary">Подробнее</a>
+                            <button class="btn btn-secondary event-details-btn" data-event="t1">Подробнее</button>
+                        </div>
+                        <div class="event-modal" id="t1-modal" style="display: none;">
+                            <div class="modal-overlay"></div>
+                            <div class="modal-content">
+                                <button class="modal-close">&times;</button>
+                                <div class="modal-header">
+                                    <h3>Хакатон от ИТ-холдинга Т1</h3>
+                                    <span class="modal-category">Хакатон</span>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-info-grid">
+                                        <div class="modal-info-item">
+                                            <strong>Даты:</strong> 25-28 ноября
+                                        </div>
+                                        <div class="modal-info-item">
+                                            <strong>Формат:</strong> Онлайн + финал
+                                        </div>
+                                        <div class="modal-info-item">
+                                            <strong>Призовой фонд:</strong> 1.200.000 ₽
+                                        </div>
+                                    </div>
+                                    <div class="modal-section">
+                                        <p><strong>Треки:</strong> VibeCode Jam (ИИ-собеседования), Self-Deploy (CI/CD)</p>
+                                    </div>
+                                    <div class="modal-actions">
+                                        <a href="#" class="btn btn-primary">Узнать больше</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </article>
 
                     <article class="event-card">
-                        <div class="event-image event-image-6">
-                            <div class="event-badge">Скоро</div>
+                        <div class="event-image">
+                            <img src="https://lh3.googleusercontent.com/d/1adQCZe_9TMXfmGvv2V3NWDJw4fC2TsQp" alt="Wink AI Challenge logo" class="event-logo">
+                            <div class="event-badge">Активные</div>
                         </div>
                         <div class="event-content">
-                            <span class="event-category">Митап</span>
-                            <h3 class="event-title">DevOps Moscow</h3>
-                            <p class="event-description">Встреча специалистов по DevOps и инфраструктуре.</p>
+                            <span class="event-category">Хакатон</span>
+                            <h3 class="event-title">Wink AI Challenge</h3>
+                            <p class="event-description">Хакатон по искусственному интеллекту. Создайте инновационные AI-решения и выиграйте призовой фонд: 1.125.000 ₽</p>
                             <div class="event-meta">
-                                <span class="event-date">28 апреля 2025</span>
-                                <span class="event-location">Москва, офис Mail.ru</span>
+                                <span class="event-date">31 октября - 29 ноября</span>
+                                <span class="event-location">Гибридный</span>
                             </div>
-                            <a href="#" class="btn btn-secondary">Подробнее</a>
+                            <button class="btn btn-secondary event-details-btn" data-event="wink">Подробнее</button>
+                        </div>
+                        <div class="event-modal" id="wink-modal" style="display: none;">
+                            <div class="modal-overlay"></div>
+                            <div class="modal-content">
+                                <button class="modal-close">&times;</button>
+                                <div class="modal-header">
+                                    <h3>Wink AI Challenge</h3>
+                                    <span class="modal-category">Хакатон</span>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-info-grid">
+                                        <div class="modal-info-item">
+                                            <strong>Даты:</strong> 31 октября - 29 ноября
+                                        </div>
+                                        <div class="modal-info-item">
+                                            <strong>Формат:</strong> Гибридный
+                                        </div>
+                                        <div class="modal-info-item">
+                                            <strong>Призовой фонд:</strong> 1.125.000 ₽
+                                        </div>
+                                    </div>
+                                    <div class="modal-section">
+                                        <p>Хакатон по искусственному интеллекту. Создавайте инновационные AI-решения для реальных задач.</p>
+                                    </div>
+                                    <div class="modal-actions">
+                                        <a href="#" class="btn btn-primary">Узнать больше</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="event-card">
+                        <div class="event-image">
+                            <img src="https://lh3.googleusercontent.com/d/1-4Abw46N-EGCbkMIOJlstZkxsY3JW7vY" alt="Газпром нефть logo" class="event-logo">
+                            <div class="event-badge">Активные</div>
+                        </div>
+                        <div class="event-content">
+                            <span class="event-category">Чемпионат</span>
+                            <h3 class="event-title">Ежегодный кейс-чемпионат от «Газпром нефти»</h3>
+                            <p class="event-description">Решайте реальные бизнес-кейсы от крупнейшей нефтяной компании. Призы: гранты на обучение и карьерные возможности.</p>
+                            <div class="event-meta">
+                                <span class="event-date">25 октября - 27 ноября</span>
+                                <span class="event-location">Онлайн + финал в Санкт-Петербурге</span>
+                            </div>
+                            <button class="btn btn-secondary event-details-btn" data-event="gazprom">Подробнее</button>
+                        </div>
+                        <div class="event-modal" id="gazprom-modal" style="display: none;">
+                            <div class="modal-overlay"></div>
+                            <div class="modal-content">
+                                <button class="modal-close">&times;</button>
+                                <div class="modal-header">
+                                    <h3>Кейс-чемпионат от «Газпром нефти»</h3>
+                                    <span class="modal-category">Чемпионат</span>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-info-grid">
+                                        <div class="modal-info-item">
+                                            <strong>Даты:</strong> 25 октября - 27 ноября
+                                        </div>
+                                        <div class="modal-info-item">
+                                            <strong>Формат:</strong> Онлайн + финал
+                                        </div>
+                                        <div class="modal-info-item">
+                                            <strong>Локация:</strong> Санкт-Петербург
+                                        </div>
+                                    </div>
+                                    <div class="modal-section">
+                                        <p>Решайте реальные бизнес-кейсы от крупнейшей нефтяной компании. Призы: гранты на обучение и карьерные возможности.</p>
+                                    </div>
+                                    <div class="modal-actions">
+                                        <a href="#" class="btn btn-primary">Узнать больше</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </article>
                 </div>
@@ -141,20 +324,21 @@
                 <h2 class="section-title">О нас</h2>
                 <div class="about-content">
                     <div class="about-text">
-                        <p>IT Events Moscow — это платформа для поиска и организации IT-событий в столице. Мы собираем информацию о лучших конференциях, митапах, хакатонах и воркшопах для разработчиков и IT-специалистов.</p>
-                        <p>Наша миссия — помочь IT-сообществу Москвы оставаться в курсе актуальных событий и находить единомышленников.</p>
+                        <p>IT Eventus — онлайн-календарь IT-соревнований. Мы агрегируем интересные ИТ-соревнования: хакатоны, чемпионаты, турниры, олимпиады по IT, программированию, разработке и дизайну, проходящие в России и мире.</p>
+                        <p>Наша цель: формирование сообщества ИТ-специалистов, которые постоянно развиваются, показать их достижения организаторам и партнерам таких мероприятий, а также предлагать перспективные вакансии или предложения от наших партнеров.</p>
+                        <p><strong>Присоединяйтесь к нам! Вместе мы сильнее и эффективнее!</strong></p>
                     </div>
                     <div class="about-stats">
                         <div class="stat-item">
-                            <div class="stat-number">500+</div>
-                            <div class="stat-label">Событий в год</div>
+                            <div class="stat-number">1000+</div>
+                            <div class="stat-label">Мероприятий</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number">10K+</div>
+                            <div class="stat-number">50K+</div>
                             <div class="stat-label">Участников</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number">50+</div>
+                            <div class="stat-number">200+</div>
                             <div class="stat-label">Организаторов</div>
                         </div>
                     </div>
@@ -165,12 +349,42 @@
         <section id="contact" class="contact-section">
             <div class="container">
                 <h2 class="section-title">Контакты</h2>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <p><strong>Email:</strong> <a href="mailto:info@iteventsmoscow.ru">info@iteventsmoscow.ru</a></p>
-                        <p><strong>Телефон:</strong> <a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
-                        <p><strong>Адрес:</strong> Москва, ул. Примерная, д. 1</p>
-                    </div>
+                <div class="contacts-grid">
+                    <a href="https://t.me/mm0l0d0y" target="_blank" class="contact-card" rel="noopener">
+                        <div class="contact-icon">
+                            <img src="assets/images/icons8-tg-1.svg" alt="Telegram" width="48" height="48">
+                        </div>
+                        <h3>Telegram</h3>
+                        <p>@mm0l0d0y</p>
+                        <span class="contact-action">Написать сообщение</span>
+                    </a>
+
+                    <a href="https://github.com/Samurai2306" target="_blank" class="contact-card" rel="noopener">
+                        <div class="contact-icon">
+                            <img src="assets/images/icons8-github-1.svg" alt="GitHub" width="48" height="48">
+                        </div>
+                        <h3>GitHub</h3>
+                        <p>Samurai2306</p>
+                        <span class="contact-action">Посмотреть код</span>
+                    </a>
+
+                    <a href="mailto:undertale2006rus@gmail.com" target="_blank" class="contact-card">
+                        <div class="contact-icon">
+                            <img src="assets/images/icons8-gmail-1.svg" alt="Email" width="48" height="48">
+                        </div>
+                        <h3>Email</h3>
+                        <p>undertale2006rus@gmail.com</p>
+                        <span class="contact-action">Отправить письмо</span>
+                    </a>
+
+                    <a href="https://vk.com/glebnigger" target="_blank" class="contact-card">
+                        <div class="contact-icon">
+                            <img src="assets/images/icons8-vk-2.svg" alt="VKontakte" width="48" height="48">
+                        </div>
+                        <h3>VKontakte</h3>
+                        <p>glebnigger</p>
+                        <span class="contact-action">Написать в VK</span>
+                    </a>
                 </div>
             </div>
         </section>
@@ -179,7 +393,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 IT Events Moscow. Все права защищены.</p>
+                <p>&copy; 2025 IT Eventus. Онлайн-календарь IT-соревнований.</p>
                 <div class="footer-links">
                     <a href="#">Политика конфиденциальности</a>
                     <a href="#">Условия использования</a>
@@ -187,6 +401,45 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.querySelectorAll('.event-details-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const eventId = this.getAttribute('data-event');
+                const modal = document.getElementById(eventId + '-modal');
+                if (modal) {
+                    modal.style.display = 'flex';
+                }
+            });
+        });
+
+        document.querySelectorAll('.modal-close').forEach(closeBtn => {
+            closeBtn.addEventListener('click', function() {
+                const modal = this.closest('.event-modal');
+                if (modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+
+        document.querySelectorAll('.modal-overlay').forEach(overlay => {
+            overlay.addEventListener('click', function() {
+                const modal = this.parentElement;
+                if (modal && modal.classList.contains('event-modal')) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.event-modal').forEach(modal => {
+                    if (modal.style.display === 'flex') {
+                        modal.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
-
